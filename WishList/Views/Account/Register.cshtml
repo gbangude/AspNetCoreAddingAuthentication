@@ -1,0 +1,35 @@
+﻿@model WishList.Models.AccountViewModels.RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <h3>Register New User</h3>
+    <form asp-action="Register">
+        <div class="text-danger" asp-validation-summary="All">
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" value="gab@gmail.com"/>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" value="Abc@1234"/>
+        </div>
+        <div>
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" value="Abc@1234"/>
+        </div>
+        <div>
+            <button type="submit">Register User</button>
+        </div>
+    </form>
+</body>
+</html>
